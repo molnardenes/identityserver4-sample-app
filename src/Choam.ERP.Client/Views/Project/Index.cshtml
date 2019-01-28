@@ -1,0 +1,18 @@
+﻿@model Choam.ERP.Client.ViewModels.ProjectIndexViewModel
+
+<div class="bottomMarginDefault">
+</div>
+<div class="container">
+    @foreach (var item in Model.Projects)
+    {
+        <div class="pull-left col-md-4">            
+            <div>
+                <div class="h5">@item.Name</div>
+                <div class="bottomMarginDefault">
+                    <a asp-action="EditProject" asp-controller="Project" asp-route-id="@item.Id">Modify</a> |
+                    <a asp-action="DeleteProject" asp-controller="Project" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div>
+        </div>
+    }
+</div> 

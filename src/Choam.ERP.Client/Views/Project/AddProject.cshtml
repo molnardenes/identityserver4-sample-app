@@ -1,0 +1,22 @@
+﻿@model Choam.ERP.Client.ViewModels.AddProjectViewModel
+
+<h2 class="leftMarginSmaller">Add Project</h2>
+<form asp-action="AddProject" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
+    <div class="form-horizontal leftMarginDefault">
+
+        <div class="form-group">
+            <div>Project name</div>
+            <input asp-for="Name" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <div>Revenue</div>
+            <input asp-for="Revenue" type="file" class="form-control" />
+        </div>
+        <div class="form-group">
+            <div>
+                <input type="submit" class="btn btn-primary" value="Add project" />
+            </div>
+        </div>
+    </div>
+</form>
